@@ -11,9 +11,12 @@ return function (App $app) {
 
         // Sample log message
         $container->get('logger')->info("Slim-Skeleton '/inicio/' route");
+        if ($_SESSION['login']['ehLogado'] != true) {
+            return $response->withRedirect('/login/');
+            exit;
+        }
 
         // Render index view
         return $container->get('renderer')->render($response, 'inicio.phtml', $args);
-
     });
 };

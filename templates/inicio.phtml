@@ -11,7 +11,16 @@
 
 <body>
     <form action="/inicio/" method="get">
-        <h1>Seja bem vindo!!!</h1>
+        <div class="col-12">
+            <div class="row">
+                <div class="col-6">
+                    <h1>Seja bem vindo, <? echo $_SESSION['login']['nome']?>!!!</h1>
+                </div>
+                <div class="col-6">
+                    <a href="/sair/" class="btn btn-primary">Sair</a>
+                </div>
+            </div>
+        </div>
     </form>
 </body>
 

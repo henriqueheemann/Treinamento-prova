@@ -14,7 +14,6 @@ return function (App $app) {
 
         // Render index view
         return $container->get('renderer')->render($response, 'login.phtml', $args);
-
     });
 
     $app->post('/login/', function (Request $request, Response $response, array $args) use ($container) {
@@ -29,7 +28,9 @@ return function (App $app) {
                                       WHERE email = "' . $params['email'] . '" 
                                             AND senha = "' . md5($params['senha']) . '"')->fetchAll();
 
-        if (count($resultSet) == 1) {           
+        if (count($resultSet) == 1) {
+            $_SESSION['login']['ehLogado'] = true;
+            $_SESSION['login']['nome'] = $resultSet[0]['nome'];
             return $response->withRedirect('/inicio/');
         } else {
             $_SESSION['login']['ehLogado'] = false;
