@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <form action="/login/" method="post">
+        <div class="container">
+            <div class="text-center m-5">
+                <h1>Login</h1>
+            </div>
+            <div class="col-12">
+                <div class="mx-auto col-6 p-1 border border-primary rounded">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">E-mail</label>
+                        <input type="email" name="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Senha</label>
+                        <input type="password" name="senha" class="form-control">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3 mb-3">
+                <label>Não possui login? <a href="/cadastro/">Cadastre-se</a></label>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../cadastro.css">
+</head>
+
+<body>
+    <form action="/cadastro/" method="post">
+        <div class="container">
+            <div class="col-12">
+                <div class="text-center m-5">
+                    <h1>Faça seu cadastro</h1>
+                </div>
+                <div class="row">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text titulo">Nome Completo</span>
+                        </div>
+                        <input type="text" name="nome" placeholder="Nome Completo" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text titulo">E-mail</span>
+                        </div>
+                        <input type="email" name="email" placeholder="E-mail" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text titulo">Senha</span>
+                        </div>
+                        <input type="password" name="senha" placeholder="Senha" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
