@@ -16,6 +16,12 @@ return function (App $app) {
             exit;
         }
 
+        $conexao = $container->get('pdo');
+
+        $resultSet = $conexao->query('SELECT * FROM inicio')->fetchAll();
+
+        $args['textos'] = $resultSet;
+        
         // Render index view
         return $container->get('renderer')->render($response, 'inicio.phtml', $args);
     });

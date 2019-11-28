@@ -11,13 +11,25 @@
 
 <body>
     <form action="/inicio/" method="get">
-        <div class="col-12">
-            <div class="row">
-                <div class="col-6">
-                    <h1>Seja bem vindo, <? echo $_SESSION['login']['nome']?>!!!</h1>
+        <div class="container">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-10">
+                        <h1>Seja bem vindo, <?php echo $_SESSION['login']['nome'] ?>!!!</h1>
+                    </div>
+                    <div class="col-2">
+                        <a href="/sair/" class="btn btn-primary">Sair</a>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <a href="/sair/" class="btn btn-primary">Sair</a>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <?php
+                    foreach ($textos as $key => $texto) {
+                        echo '<h1 class="col-sm">' . $texto['titulo'] . '</h1>';
+                        echo '<label class="col-sm">' . $texto['texto'] . '</label>';
+                    }
+                    ?>
                 </div>
             </div>
         </div>
